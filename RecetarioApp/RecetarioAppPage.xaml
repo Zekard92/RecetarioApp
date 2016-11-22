@@ -8,8 +8,8 @@
 			<DataTemplate>
 				<TextCell Text="{Binding Nombre}" Detail="{Binding Descripcion}">
 					<TextCell.ContextActions>
-						<MenuItem Text="Modificar" Clicked ="MenuItemModificar_OnClicked"/>
-						<MenuItem Text="Eliminar" Clicked ="MenuItemEliminar_OnCliecked"/>
+						<MenuItem Text="Modificar" Clicked ="MenuItemModificar_OnClicked" CommandParameter="{Binding .}"/>
+						<MenuItem Text="Eliminar" Clicked ="MenuItemEliminar_OnClicked" CommandParameter="{Binding .}"/>
 					</TextCell.ContextActions>
 				</TextCell>
 			</DataTemplate>

@@ -18,7 +18,15 @@ namespace RecetarioApp
 			tbiGuardar.Clicked += TbiGuardar_Clicked;
 
 			if (receta != null)
+			{
 				_receta = receta;
+				txtNombre.Text = _receta.Nombre;
+				txtDescripcion.Text = _receta.Descripcion;
+				txtIngrediente1.Text = _receta.Ingrediente1;
+				txtIngrediente2.Text = _receta.Ingrediente2;
+				txtIngrediente3.Text = _receta.Ingrediente3;
+				txtIngrediente4.Text = _receta.Ingrediente4;
+			}
 		}
 
 		void TbiGuardar_Clicked(object sender, EventArgs e)
@@ -37,7 +45,7 @@ namespace RecetarioApp
 				_adminRecetas.ModificarReceta(receta);
 			}
 
-			Navigation.PopModalAsync();
+			Navigation.PopAsync();
 		}
 		private Receta AsignarValores(Receta receta)
 		{

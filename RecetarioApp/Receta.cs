@@ -20,7 +20,8 @@ namespace RecetarioApp
 			set
 			{
 				_id = value;
-				PropertyChanged(this, new PropertyChangedEventArgs(nameof(ID)));
+				if(PropertyChanged != null)
+					PropertyChanged(this, new PropertyChangedEventArgs(nameof(ID)));
 			}
 		}
 
@@ -32,9 +33,7 @@ namespace RecetarioApp
 			{
 				_nombre = value;
 				if (PropertyChanged != null)
-				{
 					PropertyChanged(this, new PropertyChangedEventArgs(nameof(Nombre)));
-				}
 			}
 		}
 
@@ -44,7 +43,8 @@ namespace RecetarioApp
 			set
 			{
 				_descripcion = value;
-				PropertyChanged(this, new PropertyChangedEventArgs(nameof(Descripcion)));
+				if (PropertyChanged != null)
+					PropertyChanged(this, new PropertyChangedEventArgs(nameof(Descripcion)));
 			}
 		}
 
@@ -54,7 +54,8 @@ namespace RecetarioApp
 			set
 			{
 				_ingrediente1 = value;
-				PropertyChanged(this, new PropertyChangedEventArgs(nameof(Ingrediente1)));
+				if (PropertyChanged != null)
+					PropertyChanged(this, new PropertyChangedEventArgs(nameof(Ingrediente1)));
 			}
 		}
 
@@ -64,7 +65,8 @@ namespace RecetarioApp
 			set
 			{
 				_ingrediente2 = value;
-				PropertyChanged(this, new PropertyChangedEventArgs(nameof(Ingrediente2)));
+				if (PropertyChanged != null)
+					PropertyChanged(this, new PropertyChangedEventArgs(nameof(Ingrediente2)));
 			}
 		}
 
@@ -74,7 +76,8 @@ namespace RecetarioApp
 			set
 			{
 				_ingrediente3 = value;
-				PropertyChanged(this, new PropertyChangedEventArgs(nameof(Ingrediente3)));
+				if (PropertyChanged != null)
+					PropertyChanged(this, new PropertyChangedEventArgs(nameof(Ingrediente3)));
 			}
 		}
 
@@ -84,7 +87,8 @@ namespace RecetarioApp
 			set
 			{
 				_ingrediente4 = value;
-				PropertyChanged(this, new PropertyChangedEventArgs(nameof(Ingrediente4)));
+				if (PropertyChanged != null)
+					PropertyChanged(this, new PropertyChangedEventArgs(nameof(Ingrediente4)));
 			}
 		}
 
