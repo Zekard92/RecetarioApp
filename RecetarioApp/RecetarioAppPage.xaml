@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:RecetarioApp" x:Class="RecetarioApp.RecetarioAppPage">
+	<ContentPage.ToolbarItems>
+		<ToolbarItem x:Name="tbiAgregar" Text="Agregar"/>
+	</ContentPage.ToolbarItems>
+	<ListView x:Name="lstRecetas">
+		<ListView.ItemTemplate>
+			<DataTemplate>
+				<TextCell Text="{Binding Nombre}" Detail="{Binding Descripcion}">
+					<TextCell.ContextActions>
+						<MenuItem Text="Modificar" Clicked ="MenuItemModificar_OnClicked"/>
+						<MenuItem Text="Eliminar" Clicked ="MenuItemEliminar_OnCliecked"/>
+					</TextCell.ContextActions>
+				</TextCell>
+			</DataTemplate>
+		</ListView.ItemTemplate>
+	</ListView>
+</ContentPage>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="RecetarioApp.RecetaPage">
+	<ContentPage.ToolbarItems>
+		<ToolbarItem x:Name="tbiGuardar" Text="Guardar"/>
+	</ContentPage.ToolbarItems>
+	<StackLayout>
+		<Entry x:Name="txtNombre" Placeholder="Nombre"/>
+		<Label Text="Descripción: "/>
+		<Editor x:Name="txtDescripcion"/>
+		<Entry x:Name="txtIngrediente1" Placeholder="Ingrediente"/>
+		<Entry x:Name="txtIngrediente2" Placeholder="Ingrediente"/>
+		<Entry x:Name="txtIngrediente3" Placeholder="Ingrediente"/>
+		<Entry x:Name="txtIngrediente4" Placeholder="Ingrediente"/>
+	</StackLayout>
+</ContentPage>
