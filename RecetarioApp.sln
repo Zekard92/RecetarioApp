@@ -54,4 +54,35 @@ Global
 		{FFC09D71-D9F7-43B3-B3E7-3CE786A71FCE}.Debug|iPhone.ActiveCfg = Debug|Any CPU
 		{FFC09D71-D9F7-43B3-B3E7-3CE786A71FCE}.Debug|iPhone.Build.0 = Debug|Any CPU
 	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = None
+		$1.ResourceNamePolicy = FileFormatDefault
+		$0.TextStylePolicy = $2
+		$2.inheritsSet = null
+		$2.scope = application/xaml+xml
+		$0.XmlFormattingPolicy = $3
+		$3.inheritsSet = null
+		$3.scope = application/xaml+xml
+		$0.StandardHeader = $4
+		$4.Text = 
+		$4.IncludeInNewFiles = True
+		$0.NameConventionPolicy = $5
+		$5.Rules = $6
+		$6.NamingRule = $7
+		$7.Name = Type Parameters
+		$7.AffectedEntity = TypeParameter
+		$7.VisibilityMask = VisibilityMask
+		$7.NamingStyle = PascalCase
+		$7.IncludeInstanceMembers = True
+		$7.IncludeStaticEntities = True
+		$7.RequiredPrefixes = $8
+		$8.String = T
+		$7.RequiredSuffixes = $9
+		$9.String = Exception
+		$0.VersionControlPolicy = $10
+		$10.inheritsSet = Mono
+		version = 1.00.00
+	EndGlobalSection
 EndGlobal

@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:RecetarioApp" x:Class="RecetarioApp.RecetarioAppPage">
 	<ContentPage.ToolbarItems>
-		<ToolbarItem x:Name="tbiAgregar" Text="Agregar"/>
+		<ToolbarItem x:Name="tbiAgregar" Text="Agregar" Icon="plus.png"/>
 	</ContentPage.ToolbarItems>
 	<ListView x:Name="lstRecetas">
 		<ListView.ItemTemplate>
 			<DataTemplate>
 				<TextCell Text="{Binding Nombre}" Detail="{Binding Descripcion}">
 					<TextCell.ContextActions>
-						<MenuItem Text="Modificar" Clicked ="MenuItemModificar_OnClicked" CommandParameter="{Binding .}"/>
-						<MenuItem Text="Eliminar" Clicked ="MenuItemEliminar_OnClicked" CommandParameter="{Binding .}"/>
+						<MenuItem Text="Modificar" Clicked ="MenuItemModificar_OnClicked" CommandParameter="{Binding .}" Icon="bordercolor.png"/>
+						<MenuItem Text="Eliminar" Clicked ="MenuItemEliminar_OnClicked" CommandParameter="{Binding .}" Icon="bitbucket.png"/>
 					</TextCell.ContextActions>
 				</TextCell>
 			</DataTemplate>
