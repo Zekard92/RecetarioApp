@@ -15,6 +15,8 @@ namespace RecetarioApp
 		{
 			InitializeComponent();
 
+			_edit = Edit;
+
 			_adminRecetas = new AdministradorAccesoRecetas();
 			tbiGuardar.Clicked += TbiGuardar_Clicked;
 
@@ -45,13 +47,25 @@ namespace RecetarioApp
 				{
 					receta = new Receta();
 					receta = AsignarValores(receta);
-					_adminRecetas.AgregarReceta(receta);
+					if (!string.IsNullOrEmpty(txtNombre.Text))
+						_adminRecetas.AgregarReceta(receta);
+					else
+					{
+						DisplayAlert("Aviso", "El campo de nombre se encuentra vacío", "Enterado");
+						return;
+					}
 				}
 				else
 				{
 					receta = _receta;
 					receta = AsignarValores(receta);
-					_adminRecetas.ModificarReceta(receta);
+					if (!string.IsNullOrEmpty(txtNombre.Text))
+						_adminRecetas.ModificarReceta(receta);
+					else
+					{
+						DisplayAlert("Aviso", "El campo de nombre se encuentra vacío", "Enterado");
+						return;
+					}
 				}
 			}
 
