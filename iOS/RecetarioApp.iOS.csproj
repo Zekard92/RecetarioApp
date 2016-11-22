@@ -118,6 +118,7 @@
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Contents.json" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
@@ -133,6 +134,21 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="SQLiteServicio.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\RecetarioApp\Resources\bitbucket.png">
+      <Link>Resources\bitbucket.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\RecetarioApp\Resources\bordercolor.png">
+      <Link>Resources\bordercolor.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\RecetarioApp\Resources\check.png">
+      <Link>Resources\check.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\RecetarioApp\Resources\plus.png">
+      <Link>Resources\plus.png</Link>
+    </BundleResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.3.2.127\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.2.127\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />

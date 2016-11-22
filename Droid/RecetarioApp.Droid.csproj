@@ -115,10 +115,18 @@
     <AndroidResource Include="Resources\drawable-hdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
-    <AndroidResource Include="Resources\drawable\bordercolor.png" />
-    <AndroidResource Include="Resources\drawable\bitbucket.png" />
-    <AndroidResource Include="Resources\drawable\plus.png" />
-    <AndroidResource Include="Resources\drawable\check.png" />
+    <AndroidResource Include="..\RecetarioApp\Resources\bitbucket.png">
+      <Link>Resources\drawable\bitbucket.png</Link>
+    </AndroidResource>
+    <AndroidResource Include="..\RecetarioApp\Resources\bordercolor.png">
+      <Link>Resources\drawable\bordercolor.png</Link>
+    </AndroidResource>
+    <AndroidResource Include="..\RecetarioApp\Resources\check.png">
+      <Link>Resources\drawable\check.png</Link>
+    </AndroidResource>
+    <AndroidResource Include="..\RecetarioApp\Resources\plus.png">
+      <Link>Resources\drawable\plus.png</Link>
+    </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets')" />
