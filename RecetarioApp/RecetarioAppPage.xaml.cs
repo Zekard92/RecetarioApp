@@ -13,11 +13,19 @@ namespace RecetarioApp
 			_adminRecetas = new AdministradorAccesoRecetas();
 
 			tbiAgregar.Clicked += TbiAgregar_Clicked;
+			lstRecetas.ItemSelected += LstRecetas_ItemSelected;
 		}
 
 		void TbiAgregar_Clicked(object sender, System.EventArgs e)
 		{
 			Navigation.PushAsync(new RecetaPage());
+		}
+
+		void LstRecetas_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+		{
+			Receta receta = e.SelectedItem as Receta;
+			if (receta != null)
+				Navigation.PushAsync(new RecetaPage(receta,false));
 		}
 
 		protected override void OnAppearing()
@@ -30,7 +38,6 @@ namespace RecetarioApp
 		{
 			var menuItem = (MenuItem)sender;
 			Receta receta = (Receta)menuItem.CommandParameter;
-			//Receta receta = lstRecetas.SelectedItem as Receta;
 			if (receta != null)
 				Navigation.PushAsync(new RecetaPage(receta));
 		}

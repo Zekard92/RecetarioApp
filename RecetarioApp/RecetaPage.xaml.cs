@@ -9,8 +9,9 @@ namespace RecetarioApp
 	{
 		private AdministradorAccesoRecetas _adminRecetas;
 		private Receta _receta;
+		private bool _edit;
 
-		public RecetaPage(Receta receta = null)
+		public RecetaPage(Receta receta = null, bool Edit = true)
 		{
 			InitializeComponent();
 
@@ -27,26 +28,36 @@ namespace RecetarioApp
 				txtIngrediente3.Text = _receta.Ingrediente3;
 				txtIngrediente4.Text = _receta.Ingrediente4;
 			}
+			txtNombre.IsEnabled = Edit;
+			txtDescripcion.IsEnabled = Edit;
+			txtIngrediente1.IsEnabled = Edit;
+			txtIngrediente2.IsEnabled = Edit;
+			txtIngrediente3.IsEnabled = Edit;
+			txtIngrediente4.IsEnabled = Edit;
 		}
 
 		void TbiGuardar_Clicked(object sender, EventArgs e)
 		{
-			Receta receta;
-			if (_receta == null)
+			if (_edit)
 			{
-				receta = new Receta();
-				receta = AsignarValores(receta);
-				_adminRecetas.AgregarReceta(receta);
-			}
-			else
-			{
-				receta = _receta;
-				receta = AsignarValores(receta);
-				_adminRecetas.ModificarReceta(receta);
+				Receta receta;
+				if (_receta == null)
+				{
+					receta = new Receta();
+					receta = AsignarValores(receta);
+					_adminRecetas.AgregarReceta(receta);
+				}
+				else
+				{
+					receta = _receta;
+					receta = AsignarValores(receta);
+					_adminRecetas.ModificarReceta(receta);
+				}
 			}
 
 			Navigation.PopAsync();
 		}
+
 		private Receta AsignarValores(Receta receta)
 		{
 			receta.Nombre = txtNombre.Text;
