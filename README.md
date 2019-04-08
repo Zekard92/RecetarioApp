@@ -1,0 +1,2 @@
+# RecetarioApp
+Recetario electrónico
